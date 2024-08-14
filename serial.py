@@ -13,6 +13,7 @@ try:
 
     count = 0
     while ( count < 3 ):
+        print("Pass...")
         # Write data to the serial port
         ser.write(b'Hello, Serial Port!\n')
         count = count + 1
