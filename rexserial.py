@@ -3,7 +3,7 @@ import time
 
 
 # Configure the serial port
-port = '/dev/ttyS0'  # Replace with your serial port
+port = '/dev/ttyS1'  # Replace with your serial port
 baudrate = 115200    # Replace with your baud rate
 timeout = 1          # Timeout for read operations in seconds
 
