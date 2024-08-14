@@ -1,4 +1,6 @@
 import serial
+import time
+
 
 # Configure the serial port
 port = '/dev/ttyS0'  # Replace with your serial port
@@ -9,13 +11,17 @@ try:
     # Open the serial port
     ser = serial.Serial(port, baudrate, timeout=timeout)
 
-    # Write data to the serial port
-    ser.write(b'Hello, Serial Port!\n')
+    count = 0
+    while ( count < 3 ):
+        # Write data to the serial port
+        ser.write(b'Hello, Serial Port!\n')
+        count = count + 1
+        time.sleep(3)
 
     print("Write Complete.")
     # Read data from the serial port
-    response = ser.readline().decode('utf-8').strip()
-    print(f"Received: {response}")
+    # response = ser.readline().decode('utf-8').strip()
+    # print(f"Received: {response}")
 
 finally:
     # Close the serial port
